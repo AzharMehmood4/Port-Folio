@@ -70,15 +70,15 @@ const Portfolio = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-14 my-5">
             {
                 cardItem.map(({ id, logo, name, description, Link}) =>(
-                    <div className="md:w-[290px] md:h-[350px] border-[2px] rounded-lg shadow-lg cursor-pointer hover:scale-105 duration-300 p-1" key={id}>
+                    <div className="md:w-[290px] md:h-[350px] border-[2px] rounded-lg shadow-lg cursor-pointer hover:scale-105 duration-300 p-1 items-center" key={id}>
                         <img src={logo} className="w-[120px] h-[120px] p-1 rounded-full border-[2px]" alt="" />
                         <div>
                             <div className="px-2 font-bold mb-2 text-xl">{name}</div>
                             <p className="px-2 text-gray-700">{description}</p>
                         </div>
                         <div className="justify-around space-x-3 py-4 px-2">
-                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded ">Video</button>
-                            <a href={Link} target="_blank"><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded ">Source Code</button></a>
+                            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded ">Video</button>
+                            <a href={Link} target="_blank"><button className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded ">Source Code</button></a>
                         </div>
                     </div>
                 ))
