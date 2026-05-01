@@ -6,85 +6,117 @@ import html from "../images/html.png";
 import java from "../images/java.png";
 import react from "../images/reactjs.png";
 import tailwind from "../images/tailwind_css.png";
+
 const Portfolio = () => {
-    const cardItem=[
-        {
-            id:1,
-            logo:html,
-            name:"html",
-            description:"I have crafted a variety of impressive projects using HTML And Css both, showcasing innovation and attention to detail",
-            Link: "https://github.com/Azharmehmod/Food-Store"
 
-        },
-        {
-            id:2,
-            logo:css,
-            name:"css",
-            description:"I have crafted a variety of impressive projects using CSS, showcasing innovation and attention to detail"
+  const cardItem = [
+    {
+      id: 1,
+      logo: html,
+      name: "HTML",
+      description: "Projects built using HTML & CSS with clean structure and responsive design.",
+      Link: "https://github.com/Azharmehmod/Food-Store"
+    },
+    {
+      id: 2,
+      logo: css,
+      name: "CSS",
+      description: "Modern UI designs using advanced CSS styling and animations."
+    },
+    {
+      id: 3,
+      logo: javscript,
+      name: "JavaScript",
+      description: "Interactive web applications built using JavaScript logic and DOM manipulation."
+    },
+    {
+      id: 4,
+      logo: react,
+      name: "React JS",
+      description: "Dynamic and scalable frontend apps built with React.",
+      Link: "https://github.com/Azharmehmod/Shopsy"
+    },
+    {
+      id: 5,
+      logo: tailwind,
+      name: "Tailwind CSS",
+      description: "Responsive UI designs using utility-first Tailwind CSS framework.",
+      Link: "https://github.com/Azharmehmod/Landing-page"
+    },
+    {
+      id: 6,
+      logo: bootstrap,
+      name: "Bootstrap",
+      description: "Responsive layouts using Bootstrap components and grid system."
+    },
+  ];
 
-        },
-        {
-            id:3,
-            logo:javscript,
-            name:"javascript",
-            description:"I have crafted a variety of impressive projects using Javascript, showcasing innovation and attention to detail"
-
-        },
-        {
-            id:4,
-            logo:react,
-            name:"react js",
-            description:"I have crafted a variety of impressive projects using React js, showcasing innovation and attention to detail",
-            Link: "https://github.com/Azharmehmod/Shopsy"
-
-        },        
-        {
-            id:5,
-            logo:tailwind,
-            name:"tailwindcss",
-            description:"I have crafted a variety of impressive projects using Tailwindcss, showcasing innovation and attention to detail",
-            Link: "https://github.com/Azharmehmod/Landing-page"
-
-        },
-        {
-            id:6,
-            logo:bootstrap,
-            name:"bootsrtap",
-            description:"I have crafted a variety of impressive projects using Bootstrap, showcasing innovation and attention to detail"
-
-        },
-        {
-            id:6,
-            logo:java,
-            name:"java",
-            description:"I have crafted a variety of impressive projects using Java, showcasing innovation and attention to detail"
-
-        },
-    ]
   return (
-    <div name="Portfolio" className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10">
-      <div>
-        <h1 className="text-3xl font-bold mb-5">Portfolio</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-14 my-5">
-            {
-                cardItem.map(({ id, logo, name, description, Link}) =>(
-                    <div className="md:w-[290px] md:h-[350px] border-[2px] rounded-lg shadow-lg cursor-pointer hover:scale-105 duration-300 p-1 items-center" key={id}>
-                        <img src={logo} className="w-[120px] h-[120px] p-1 rounded-full border-[2px]" alt="" />
-                        <div>
-                            <div className="px-2 font-bold mb-2 text-xl">{name}</div>
-                            <p className="px-2 text-gray-700">{description}</p>
-                        </div>
-                        <div className="justify-around space-x-3 py-4 px-2">
-                            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded ">Video</button>
-                            <a href={Link} target="_blank"><button className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded ">Source Code</button></a>
-                        </div>
-                    </div>
-                ))
-            }
-        </div>
+    <div name="Projects" className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-16">
+
+      {/* Heading */}
+      <h1 className="text-4xl font-bold text-gray-800 mb-10 text-center md:text-left">
+        Projects
+      </h1>
+
+      {/* Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        {cardItem.map(({ id, logo, name, description, Link }) => (
+          <div
+            key={id}
+            className="bg-white border rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 flex flex-col items-center text-center"
+          >
+
+            {/* Image Center */}
+            <div className="w-24 h-24 flex items-center justify-center mb-4">
+              <img
+                src={logo}
+                alt={name}
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+            {/* Title */}
+            <h2 className="text-xl font-semibold text-gray-800 capitalize">
+              {name}
+            </h2>
+
+            {/* Description */}
+            <p className="text-gray-600 text-sm mt-3 mb-6">
+              {description}
+            </p>
+
+            {/* Button */}
+            {Link ? (
+              <a
+                href={Link}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-auto w-full"
+              >
+                <button  className="w-full py-3 rounded-xl text-white font-semibold 
+                       bg-gradient-to-r from-black to-gray-700 
+                       hover:from-gray-800 hover:to-black 
+                       transition duration-5000 shadow-md hover:shadow-lg">
+                  Live Demo
+                </button>
+              </a>
+            ) : (
+              <button
+                disabled
+                className="w-full bg-gray-300 text-gray-600 py-2 rounded-xl cursor-not-allowed"
+              >
+                No Demo
+              </button>
+            )}
+
+          </div>
+        ))}
+
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;

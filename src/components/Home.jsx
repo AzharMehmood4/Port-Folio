@@ -1,12 +1,6 @@
 import { Link } from "react-scroll";
-import React from "react";
-import { FaLinkedin, FaTelegram } from "react-icons/fa";
-import { FaNodeJs, FaSquareFacebook, FaYoutube } from "react-icons/fa6";
-import { SiExpress, SiMongodb } from "react-icons/si";
-import { TbBrandDjango } from "react-icons/tb";
 import { ReactTyped } from "react-typed";
 import img from "../images/azhr.png";
-import contact from "./Contact.jsx";
 
 const Home = () => {
   return (
