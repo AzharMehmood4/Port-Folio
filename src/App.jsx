@@ -2,7 +2,7 @@ import { Toaster } from 'react-hot-toast';
 import './App.css';
 import About from './components/About';
 import Contact from './components/Contact';
-import Experiance from './components/Experiance';
+// import Experiance from './components/Experiance';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
@@ -16,7 +16,7 @@ function App() {
     <Home/>
     <About/>
     <Portfolio/>
-    <Experiance/>
+    {/* <Experiance/> */}
     <Contact/>
     <Footer/>
     </div>

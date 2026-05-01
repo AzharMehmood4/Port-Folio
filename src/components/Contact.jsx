@@ -1,66 +1,245 @@
+// import React from 'react';
+// import { useForm } from "react-hook-form";
+// import axios from 'axios';
+// import toast from 'react-hot-toast';
+
+// const Contact = () => {
+//   const {
+//     register,
+//     handleSubmit,
+//     formState: { errors },
+//     reset
+//   } = useForm();
+
+//   const onSubmit = async (data) => {
+//     const userInfo = {
+//       name: data.name,
+//       whatsapp: data.whatsapp,
+//       email: data.email,
+//       message: data.message,
+//     };
+
+//     try {
+//       await axios.post("https://getform.io/f/adryjkka", userInfo);
+//       toast.success("Your message has been sent");
+//       reset(); // clear form after submit
+//     } catch (error) {
+//       console.log(error);
+//       toast.error("Something went wrong");
+//     }
+//   };
+
+//   return (
+//     <div name="Contact" className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16">
+//       <h1 className="text-3xl font-bold mb-4">Contact me</h1>
+//       <span>Please fill out the form below to contact me</span>
+
+//       <div className="flex flex-col items-center mt-5">
+//         <form
+//           onSubmit={handleSubmit(onSubmit)}
+//           className="bg-slate-200 w-3/4 px-8 py-6 rounded-xl"
+//         >
+//           <h1 className="font-semibold mb-4 text-xl">Send Your Message</h1>
+
+//           {/* Full Name */}
+//           <div className="flex flex-col mb-4">
+//             <label className="block text-gray-700">Full Name</label>
+//             <input
+//               {...register("name", { required: true })}
+//               className="shadow border rounded-lg py-2 px-3"
+//               type="text"
+//               placeholder="Enter your full name"
+//             />
+//             {errors.name && <span className="text-red-500">This field is required</span>}
+//           </div>
+
+//           {/* WhatsApp */}
+//           <div className="flex flex-col mb-4">
+//             <label className="block text-gray-700">WhatsApp Number</label>
+//             <input
+//               {...register("whatsapp", { required: true })}
+//               className="shadow border rounded-lg py-2 px-3"
+//               type="number"
+//               placeholder="Enter your WhatsApp number"
+//             />
+//             {errors.whatsapp && <span className="text-red-500">This field is required</span>}
+//           </div>
+
+//           {/* Email */}
+//           <div className="flex flex-col mb-4">
+//             <label className="block text-gray-700">Email Address</label>
+//             <input
+//               {...register("email", { required: true })}
+//               className="shadow border rounded-lg py-2 px-3"
+//               type="email"
+//               placeholder="Enter your email address"
+//             />
+//             {errors.email && <span className="text-red-500">This field is required</span>}
+//           </div>
+
+//           {/* Message */}
+//           <div className="flex flex-col mb-4">
+//             <label className="block text-gray-700">Message</label>
+//             <textarea
+//               {...register("message", { required: true })}
+//               rows={6}
+//               className="shadow border rounded-lg py-2 px-3"
+//               placeholder="Enter your query"
+//             />
+//             {errors.message && <span className="text-red-500">This field is required</span>}
+//           </div>
+
+//           <div className="flex flex-col items-center md:items-end">
+//             <button
+//               type="submit"
+//               className="bg-black text-white rounded-xl px-8 py-3 hover:bg-slate-700"
+//             >
+//               Send
+//             </button>
+//           </div>
+
+//         </form>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Contact;
+
+
 import React from 'react';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
 const Contact = () => {
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-      } = useForm();
-      const onSubmit = async (data) => {
-        const userInfo={
-            name:data.name,
-            email:data.email,
-            message:data.message,
-        }
-        try{
-           await axios.post("https://getform.io/f/adryjkka", userInfo);
-           toast.success("your message has been sent")
-        } catch (error){
-            console.log(error);
-            toast.error("Something went Wrong")
-        }
-      }
-  return (
-    <>
-    <div name="Contact" className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16">
-        <h1 className="text-3xl font-bold mb-4">Contact me</h1>
-        <span>Please fill out the form out the form below to contact me</span>
-        <div className="flex flex-col items-center justify-center mt-5">
-                <form  onSubmit={handleSubmit(onSubmit)} 
-                    // action="https://getform.io/f/adryjkka"  
-                    // method="POST" 
-                    className="bg-slate-200 w-96 px-8 py-6 rounded-xl">
-                        <h1 className="font-semibold mb-4 text-xl">Send Your Message</h1>
-                        <div className="flex flex-col mb-4">
-                            <label htmlFor="name" className="block text-gray-700">
-                            Full Name
-                            </label>
-                            <input  {...register("name", { required: true })} name="name" className="shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg " type="text" id="name" placeholder="Enter your full Name"/>
-                            {errors.name && <span>This field is required</span>}
-                        </div>
-                        <div className="flex flex-col mb-4">
-                            <label htmlFor="name" className="block text-gray-700">
-                            Email Address
-                            </label>
-                            <input {...register("email", { required: true })} name="email" className="shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg " type="text" id="name" placeholder="Enter your Email address"/>
-                            {errors.email && <span>This field is required</span>}
-                        </div>
-                        <div className="flex flex-col mb-4">
-                            <label htmlFor="name" className="block text-gray-700">
-                            Message
-                            </label>
-                            <textarea {...register("message", { required: true })} name="message" className="shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg " type="text" id="name" placeholder="Enter your Query"/>
-                            {errors.message && <span>This field is required</span>}
-                        </div>
-                        <button type="submit" className="bg-black text-white rounded-xl px-3 py-2 hover:bg-slate-700 duration-00">Send</button>
-                </form>
-        </div>
-    </div>
-    </>
-  )
-}
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm();
 
-export default Contact
+  const onSubmit = async (data) => {
+    try {
+      await axios.post("https://getform.io/f/adryjkka", data);
+      toast.success("Message sent successfully!");
+      reset();
+    } catch (error) {
+      toast.error("Something went wrong");
+    }
+  };
+
+  return (
+    <div name="Contact" className="max-w-screen-2xl mx-auto px-6 md:px-20 py-24">
+
+      {/* Heading */}
+      <div className="text-left mb-8">
+        <h1 className="text-4xl font-bold text-gray-800">Contact Me</h1>
+        <p className="text-gray-500 mt-2 max-w-xl">
+          Let’s connect! I’m always open to discussing new projects, ideas, or opportunities.
+        </p>
+      </div>
+
+      {/* Main Layout */}
+      <div className="flex flex-col md:flex-row gap-12">
+
+        {/* LEFT SIDE - TEXT */}
+        <div className="md:w-1/2 flex flex-col justify-center">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Let’s build something amazing together 
+          </h2>
+
+          <p className="text-gray-600 leading-relaxed mb-6">
+            If you have any questions, project ideas, or just want to say hello,
+            feel free to reach out. I usually respond within 24 hours.
+          </p>
+
+          <div className="space-y-2 text-gray-600">
+            <p>📧 Email: azharm3014@gmail.com</p>
+            <p>📱 WhatsApp: +92 3051196565</p>
+            <p>📍 Location: Islamabad Pakistan</p>
+          </div>
+        </div>
+
+        {/* RIGHT SIDE - FORM */}
+        <div className="md:w-1/2 bg-white shadow-xl rounded-2xl p-8">
+
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+            <h1 className="font-semibold text-gray-700 mb-4 text-xl">Send Your Message</h1>
+
+            {/* Name */}
+            <div>
+              <input
+                {...register("name", { required: true })}
+                type="text"
+                placeholder="Your Name"
+                className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-black outline-none"
+              />
+              {errors.name && <p className="text-red-500 text-sm">Required</p>}
+            </div>
+
+            {/* WhatsApp */}
+            <div>
+  <input
+    {...register("whatsapp", {
+      required: "Required",
+      pattern: {
+        value: /^\+?[0-9]{10,15}$/,
+        message: "Invalid number",
+      },
+    })}
+    type="tel"
+    placeholder="WhatsApp Number"
+    className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-black outline-none"
+  />
+
+  {errors.whatsapp && (
+    <p className="text-red-500 text-sm mt-1">
+      {errors.whatsapp.message}
+    </p>
+  )}
+</div>
+
+
+            {/* Email */}
+            <div>
+              <input
+                {...register("email", { required: true })}
+                type="email"
+                placeholder="Email Address"
+                className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-black outline-none"
+              />
+              {errors.email && <p className="text-red-500 text-sm">Required</p>}
+            </div>
+
+            {/* Message */}
+            <div>
+              <textarea
+                {...register("message", { required: true })}
+                rows={5}
+                placeholder="Your Message"
+                className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-black outline-none"
+              />
+              {errors.message && <p className="text-red-500 text-sm">Required</p>}
+            </div>
+
+            {/* Button */}
+            <button
+              type="submit"
+               className="w-full py-3 rounded-xl text-white font-semibold 
+                       bg-gradient-to-r from-black to-gray-700 
+                       hover:from-gray-800 hover:to-black 
+                       transition duration-300 shadow-md hover:shadow-lg"            >
+              Send Message
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default Contact;

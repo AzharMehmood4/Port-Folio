@@ -20,10 +20,6 @@ function Navbar  () {
         text:"Portfolio",
     },
     {
-        id:4,
-        text:"Experiance",
-    },
-    {
         id:5,
         text:"Contact",
     },
@@ -34,7 +30,7 @@ function Navbar  () {
             <div className="flex justify-between items-center h-16">
                         <div className="left flex space-x-2">
                         <img className="h-12 w-12 rounded-full" src={pic} alt="" />
-                        <h1 className="font-semibold text-xl cursor-pointer">Azha<span className="text-green-500 text-2xl">r</span>
+                        <h1 className="font-semibold text-xl cursor-pointer">Azha<span className="text-red-700 text-2xl">r</span>
                         <p className="text-sm">Software Developer</p>
                         </h1>
                         

@@ -1,34 +1,85 @@
-import React from 'react'
+import React from "react";
 
 const About = () => {
   return (
-    <div name="About" className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16">
-        <div>
+    <div
+      name="About"
+      className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16"
+    >
+      {/* Heading */}
+      <h1 className="font-bold text-3xl mb-6 border-b-2 border-red-700 inline-block">
+        About Me
+      </h1>
 
-              <h1 className="font-bold text-3xl mb-5">About</h1>
-            <p>Hello I'am Azhar a passionate web developer with a background in IT, specializing in front-end development. I am currently starting my journey into back-end development, aiming to create impactful and visually stunning software solutions that leave a lasting impression. </p>
-            <br />
-            <h1 className="text-green-500 font-semibold text-xl">Education & Training</h1>
-            <span>
-              [Student of Software Engineerin],[Abasyn University Islamabad],[2023 to 2027],[Ics],[Superior College Mianwali],[2020 to 2022]
-            </span>
-            <br /> <br />
-            <h1 className="text-green-500 font-semibold text-xl">Skills & Experties</h1>
-            <span>
-              Proficient in [Python, Java, Javascript, React js,] Experienced with [Html,Css,TailwindCss,Boootstrap] Strong grasp of [Front-end development],[2023 to ....]
-            </span>
-            <br /> <br />
-            <h1 className="text-green-500 font-semibold text-xl">Professional Experience</h1>
-            <span>
-              [ Internship],[Structures Limited ],[2024 to ...]
-            </span>
-            <br /> <br />
-            <h1 className="text-green-500 font-semibold text-xl">Mission Statement</h1>
-            <p>My mission is to leverge my skills and creativity to delivers innovative[Web Development] solution that exceed clint expection and contribute positivity to the digital landspace. I am commited to continuous learning and groth, always seeking new challenges and opportunities to expand my horizons</p>
+      {/* Intro */}
+      <div className="text-gray-700 leading-relaxed space-y-4">
+        <p>
+          Hello, I'm <span className="font-semibold text-black">Azhar</span>, a
+          <span className="text-red-700 font-semibold">
+            {" "}
+            Full Stack Software Developer{" "}
+          </span>
+          specializing in both{" "}
+          <span className="font-medium">
+            Web and Mobile Application Development
+          </span>
+          .
+        </p>
+
+        <p>
+          I build scalable, high-performance applications using modern
+          technologies like
+          <span className="font-medium">
+            {" "}
+            React.js, Node.js, and React Native
+          </span>
+          . My focus is on delivering seamless user experiences, clean
+          architecture, and efficient backend systems.
+        </p>
+
+        <p>
+          I am passionate about turning ideas into real-world digital products
+          that are fast, responsive, and user-friendly across all platforms.
+        </p>
+      </div>
+
+      {/* Education */}
+      <div className="mt-8">
+        <h2 className="text-red-700 font-semibold text-xl mb-2">
+          🎓 Education
+        </h2>
+        <p className="text-gray-700">
+          <span className="font-medium">BS Software Engineering</span> — Abasyn
+          University
+          <br />
+        </p>
+      </div>
+
+      {/* Skills */}
+      <div className="mt-8">
+        <h2 className="text-red-700 font-semibold text-xl mb-2">
+          💻 Technical Skills
+        </h2>
+        <p className="text-gray-700">
+          <span className="font-medium">Languages:</span> JavaScript, Python
+          <br />
+          <span className="font-medium">Frontend (Web):</span> HTML, CSS,
+          Tailwind CSS,React|Next.js
+          <br />
+          <span className="font-medium">Mobile Development:</span> React Native
+          <br />
+          <span className="font-medium">Backend:</span> Node.js, Express.js
+          (REST APIs)
+          <br />
+          <span className="font-medium">Databases:</span> MongoDB, MySQL,
+          Firebase
+          <br />
+          <span className="font-medium">Tools:</span> Git, GitHub, Vercel,
+          Render, VS Code
+        </p>
+      </div>
     </div>
+  );
+};
 
-    </div>
-  )
-}
-
-export default About
+export default About;

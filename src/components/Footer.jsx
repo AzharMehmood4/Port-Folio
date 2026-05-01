@@ -18,7 +18,7 @@ const Footer = () => {
                     <p className="text-sm">
                         &copy; 2024 Your Company. All rights reserved.
                     </p>
-                    <p>Supportive Partner <span className="text-red-600">❤</span> Azhar</p>
+                    <p>Developed by<span className="text-green-500"> Azhar</span> </p>
                 </div>
             </div>
         </div>

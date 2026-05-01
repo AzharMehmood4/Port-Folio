@@ -6,7 +6,6 @@ import html from "../images/html.png";
 import java from "../images/java.png";
 import react from "../images/reactjs.png";
 import tailwind from "../images/tailwind_css.png";
-// import { python } from '..';
 const Portfolio = () => {
     const cardItem=[
         {
@@ -66,7 +65,6 @@ const Portfolio = () => {
     <div name="Portfolio" className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10">
       <div>
         <h1 className="text-3xl font-bold mb-5">Portfolio</h1>
-        <p className="font-semibold underline">Featured Projects</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-14 my-5">
             {
                 cardItem.map(({ id, logo, name, description, Link}) =>(
