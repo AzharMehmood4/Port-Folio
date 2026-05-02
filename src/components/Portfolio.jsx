@@ -2,26 +2,27 @@ import React from 'react';
 import javscript from "../images/JavaScript-Emblem.png";
 import bootstrap from "../images/bootstap.png";
 import css from "../images/css.jpg";
-import html from "../images/html.png";
-import java from "../images/java.png";
+import auto from "../images/auto.png"
 import react from "../images/reactjs.png";
 import tailwind from "../images/tailwind_css.png";
+import mirsal from "../images/mirsal.png"
 
 const Portfolio = () => {
 
   const cardItem = [
     {
       id: 1,
-      logo: html,
-      name: "HTML",
-      description: "Projects built using HTML & CSS with clean structure and responsive design.",
-      Link: "https://github.com/Azharmehmod/Food-Store"
+      logo: mirsal,
+      name: "mirsal2trade",
+      description: "Mirsal Dubai is an admin-based Web app that manages Vehicle Clearance Certificates (VCC) by allowing secure login, record storage.",
+      Link: "https://mirsal2new.dubaitrede.ae/"
     },
     {
       id: 2,
-      logo: css,
-      name: "CSS",
-      description: "Modern UI designs using advanced CSS styling and animations."
+      logo: auto,
+      name: "autocarwindscreen",
+      description: "Auto Car Windscreen is a service-based web platform that provides windscreen repair and replacement solutions by offering fast response and online booking for vehicle glass services across the UK.",
+      Link: "https://autocarwindscreen.uk/"
     },
     {
       id: 3,

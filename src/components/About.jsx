@@ -50,7 +50,7 @@ const About = () => {
         </h2>
         <p className="text-gray-700">
           <span className="font-medium">BS Software Engineering</span> — Abasyn
-          University
+          University Islamabad
           <br />
         </p>
       </div>
