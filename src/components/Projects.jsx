@@ -1,62 +1,65 @@
 import React from 'react';
 import javscript from "../images/JavaScript-Emblem.png";
-import bootstrap from "../images/bootstap.png";
-import css from "../images/css.jpg";
+import chi from "../images/chi.png"
+import mind from "../images/mind.png"
 import auto from "../images/auto.png"
-import react from "../images/reactjs.png";
-import tailwind from "../images/tailwind_css.png";
+import gts from "../images/gts.png"
+import shopsy from "../images/shopsy.png"
 import mirsal from "../images/mirsal.png"
 
-const Portfolio = () => {
+const Projects = () => {
 
   const cardItem = [
     {
       id: 1,
-      logo: mirsal,
-      name: "mirsal2trade",
-      description: "Mirsal Dubai is an admin-based Web app that manages Vehicle Clearance Certificates (VCC) by allowing secure login, record storage.",
-      Link: "https://mirsal2new.dubaitrede.ae/"
-    },
-    {
-      id: 2,
       logo: auto,
       name: "autocarwindscreen",
       description: "Auto Car Windscreen is a service-based web platform that provides windscreen repair and replacement solutions by offering fast response and online booking for vehicle glass services across the UK.",
       Link: "https://autocarwindscreen.uk/"
     },
     {
+      id: 2,
+      logo: mirsal,
+      name: "mirsal2trade",
+      description: "Mirsal Dubai is an admin-based Web app that manages Vehicle Clearance Certificates (VCC) by allowing secure login, record storage.",
+      Link: "https://mirsal2new.dubaitrede.ae/"
+    },
+    {
       id: 3,
-      logo: javscript,
-      name: "JavaScript",
-      description: "Interactive web applications built using JavaScript logic and DOM manipulation."
+      logo: gts,
+      name: "GTS",
+      description: "Gafar Technical Services is a service-based website that provides construction and technical solutions.",
+      Link: "https://gafartechnical.com/"
     },
     {
       id: 4,
-      logo: react,
-      name: "React JS",
-      description: "Dynamic and scalable frontend apps built with React.",
-      Link: "https://github.com/Azharmehmod/Shopsy"
+      logo: mind,
+      name: "Mindspace",
+      description: "MindSpace is a web-based wellness app that helps users improve mental health through meditation, relaxation, self-care, and AI chatbot support.",
+      Link: "https://mindspace-murex.vercel.app/"
     },
     {
       id: 5,
-      logo: tailwind,
-      name: "Tailwind CSS",
-      description: "Responsive UI designs using utility-first Tailwind CSS framework.",
-      Link: "https://github.com/Azharmehmod/Landing-page"
+      logo: chi,
+      name: "chichi Enterprises",
+      description: "ChiChiEnt is a travel agency website offering tailored solutions for vacations, adventures, business trips, and religious journeys like Umrah and Hajj.",
+      Link: "https://www.chichient.com/"
     },
     {
       id: 6,
-      logo: bootstrap,
-      name: "Bootstrap",
-      description: "Responsive layouts using Bootstrap components and grid system."
+      logo: shopsy,
+      name: "Shopsy",
+      description: "Responsive shopsy UI designs using React+Tailwind CSS",
+      Link: "https://shopsy-dusky.vercel.app/"
     },
   ];
 
   return (
-    <div name="Projects" className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-16">
-
+    <>
+    <div data-aos="fade-left" name="Projects" className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16">
+    
       {/* Heading */}
-      <h1 className="text-4xl font-bold text-gray-800 mb-10 text-center md:text-left">
+      <h1 className=" text-gray-800 mb-10 hover:cursor-pointer text-center md:text-left font-bold text-3xl border-b-2 border-red-700 inline-block">
         Projects
       </h1>
 
@@ -65,6 +68,8 @@ const Portfolio = () => {
 
         {cardItem.map(({ id, logo, name, description, Link }) => (
           <div
+            data-aos="fade-up"
+            data-aos-delay={id * 100}
             key={id}
             className="bg-white border rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 flex flex-col items-center text-center"
           >
@@ -117,7 +122,9 @@ const Portfolio = () => {
 
       </div>
     </div>
+    <hr/>
+    </>
   );
 };
 
-export default Portfolio;
+export default Projects;

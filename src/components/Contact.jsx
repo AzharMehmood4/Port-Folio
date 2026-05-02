@@ -1,112 +1,3 @@
-// import React from 'react';
-// import { useForm } from "react-hook-form";
-// import axios from 'axios';
-// import toast from 'react-hot-toast';
-
-// const Contact = () => {
-//   const {
-//     register,
-//     handleSubmit,
-//     formState: { errors },
-//     reset
-//   } = useForm();
-
-//   const onSubmit = async (data) => {
-//     const userInfo = {
-//       name: data.name,
-//       whatsapp: data.whatsapp,
-//       email: data.email,
-//       message: data.message,
-//     };
-
-//     try {
-//       await axios.post("https://getform.io/f/adryjkka", userInfo);
-//       toast.success("Your message has been sent");
-//       reset(); // clear form after submit
-//     } catch (error) {
-//       console.log(error);
-//       toast.error("Something went wrong");
-//     }
-//   };
-
-//   return (
-//     <div name="Contact" className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16">
-//       <h1 className="text-3xl font-bold mb-4">Contact me</h1>
-//       <span>Please fill out the form below to contact me</span>
-
-//       <div className="flex flex-col items-center mt-5">
-//         <form
-//           onSubmit={handleSubmit(onSubmit)}
-//           className="bg-slate-200 w-3/4 px-8 py-6 rounded-xl"
-//         >
-//           <h1 className="font-semibold mb-4 text-xl">Send Your Message</h1>
-
-//           {/* Full Name */}
-//           <div className="flex flex-col mb-4">
-//             <label className="block text-gray-700">Full Name</label>
-//             <input
-//               {...register("name", { required: true })}
-//               className="shadow border rounded-lg py-2 px-3"
-//               type="text"
-//               placeholder="Enter your full name"
-//             />
-//             {errors.name && <span className="text-red-500">This field is required</span>}
-//           </div>
-
-//           {/* WhatsApp */}
-//           <div className="flex flex-col mb-4">
-//             <label className="block text-gray-700">WhatsApp Number</label>
-//             <input
-//               {...register("whatsapp", { required: true })}
-//               className="shadow border rounded-lg py-2 px-3"
-//               type="number"
-//               placeholder="Enter your WhatsApp number"
-//             />
-//             {errors.whatsapp && <span className="text-red-500">This field is required</span>}
-//           </div>
-
-//           {/* Email */}
-//           <div className="flex flex-col mb-4">
-//             <label className="block text-gray-700">Email Address</label>
-//             <input
-//               {...register("email", { required: true })}
-//               className="shadow border rounded-lg py-2 px-3"
-//               type="email"
-//               placeholder="Enter your email address"
-//             />
-//             {errors.email && <span className="text-red-500">This field is required</span>}
-//           </div>
-
-//           {/* Message */}
-//           <div className="flex flex-col mb-4">
-//             <label className="block text-gray-700">Message</label>
-//             <textarea
-//               {...register("message", { required: true })}
-//               rows={6}
-//               className="shadow border rounded-lg py-2 px-3"
-//               placeholder="Enter your query"
-//             />
-//             {errors.message && <span className="text-red-500">This field is required</span>}
-//           </div>
-
-//           <div className="flex flex-col items-center md:items-end">
-//             <button
-//               type="submit"
-//               className="bg-black text-white rounded-xl px-8 py-3 hover:bg-slate-700"
-//             >
-//               Send
-//             </button>
-//           </div>
-
-//         </form>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Contact;
-
-
 import React from 'react';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
@@ -131,11 +22,10 @@ const Contact = () => {
   };
 
   return (
-    <div name="Contact" className="max-w-screen-2xl mx-auto px-6 md:px-20 py-24">
-
+    <div data-aos="fade-right" name="Contact" className="max-w-screen-2xl mx-auto px-6 md:px-20 py-20">
       {/* Heading */}
       <div className="text-left mb-8">
-        <h1 className="text-4xl font-bold text-gray-800">Contact Me</h1>
+        <h1 className="font-bold text-3xl hover:cursor-pointer mb-6 border-b-2 border-red-700 inline-block">Contact Me</h1>
         <p className="text-gray-500 mt-2 max-w-xl">
           Let’s connect! I’m always open to discussing new projects, ideas, or opportunities.
         </p>
@@ -145,7 +35,7 @@ const Contact = () => {
       <div className="flex flex-col md:flex-row gap-12">
 
         {/* LEFT SIDE - TEXT */}
-        <div className="md:w-1/2 flex flex-col justify-center">
+        <div data-aos="fade-right"  className="md:w-1/2 flex flex-col justify-center">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
             Let’s build something amazing together 
           </h2>
@@ -163,7 +53,7 @@ const Contact = () => {
         </div>
 
         {/* RIGHT SIDE - FORM */}
-        <div className="md:w-1/2 bg-white shadow-xl rounded-2xl p-8">
+        <div data-aos="fade-left" className="md:w-1/2 bg-white shadow-xl rounded-2xl p-8">
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
             <h1 className="font-semibold text-gray-700 mb-4 text-xl">Send Your Message</h1>

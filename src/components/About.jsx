@@ -2,12 +2,14 @@ import React from "react";
 
 const About = () => {
   return (
+    <>
     <div
+      data-aos="fade-right"
       name="About"
       className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16"
     >
       {/* Heading */}
-      <h1 className="font-bold text-3xl mb-6 border-b-2 border-red-700 inline-block">
+      <h1 className="font-bold text-3xl hover:cursor-pointer mb-6 border-b-2 border-red-700 inline-block">
         About Me
       </h1>
 
@@ -79,6 +81,8 @@ const About = () => {
         </p>
       </div>
     </div>
+    <hr/>
+    </>
   );
 };
 
