@@ -4,17 +4,16 @@ const About = () => {
   return (
     <>
     <div
-      data-aos="fade-right"
       name="About"
       className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16"
     >
       {/* Heading */}
-      <h1 className="font-bold text-3xl hover:cursor-pointer mb-6 border-b-2 border-red-700 inline-block">
+      <h1 data-aos="fade-right" className="font-bold text-3xl hover:cursor-pointer mb-6 border-b-2 border-red-700 inline-block">
         About Me
       </h1>
 
       {/* Intro */}
-      <div className="text-gray-700 leading-relaxed space-y-4">
+      <div data-aos="fade-right" className="text-gray-700 leading-relaxed space-y-4">
         <p>
           Hello, I'm <span className="font-semibold text-black">Azhar</span>, a
           <span className="text-red-700 font-semibold">
@@ -46,7 +45,7 @@ const About = () => {
       </div>
 
       {/* Education */}
-      <div className="mt-8">
+      <div data-aos="fade-left" className="mt-8">
         <h2 className="text-red-700 font-semibold text-xl mb-2">
           🎓 Education
         </h2>
@@ -58,7 +57,7 @@ const About = () => {
       </div>
 
       {/* Skills */}
-      <div className="mt-8">
+      <div data-aos="fade-right" className="mt-8">
         <h2 className="text-red-700 font-semibold text-xl mb-2">
           💻 Technical Skills
         </h2>

@@ -36,9 +36,6 @@ const Footer = () => {
 
             {/* Bottom Text */}
             <div className="mt-8 border-t border-gray-700 pt-8 flex flex-col items-center">
-              <p className="text-sm text-gray-500">
-                &copy; {year} Your Company. All rights reserved.
-              </p>
               <p className="text-gray-400">
                 Developed by <span className="text-red-700 font-medium">Azhar</span>
               </p>

@@ -32,14 +32,14 @@ function Navbar() {
             <img className="h-12 w-12 rounded-full" src={pic} alt="" />
             <h1 className="font-semibold text-xl cursor-pointer">
               Azha<span className="text-red-700 text-2xl">r</span>
-              <p className="text-sm">Software Developer</p>
+              <p className="text-sm text-gray-700">Software Developer</p>
             </h1>
           </div>
           <div className="right">
             <ul className=" space-x-8 hidden md:flex">
               {navItems.map(({ id, text }) => (
                 <li
-                  className="hover:scale-105 duration-200 cursor-pointer"
+                  className="hover:scale-105 duration-200 cursor-pointer text-gray-700"
                   key={id}
                 >
                   <Link
@@ -90,7 +90,7 @@ function Navbar() {
                   <h2 className="font-semibold text-2xl tracking-tight text-gray-900">
                     Azha<span className="text-red-700">r</span>
                   </h2>
-                  <p className="text-sm text-gray-500">Software Developer</p>
+                  <p className="text-sm text-gray-700">Software Developer</p>
                 </div>
               </div>
 
@@ -110,9 +110,11 @@ function Navbar() {
               {navItems.map(({ id, text }) => (
                 <li key={id}>
                   <Link
-                    to={text.toLowerCase()}
+                    to={text}
+                    activeClass="active"
                     smooth={true}
                     duration={700}
+                    activeclass='active'
                     offset={-90}
                     onClick={() => setMenu(false)}
                     className="group flex items-center px-6 py-4 text-lg font-medium text-gray-700 

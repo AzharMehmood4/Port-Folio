@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import './App.css';
 import About from './components/About';
 import Contact from './components/Contact';
-// import Experiance from './components/Experiance';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
@@ -15,8 +14,8 @@ function App() {
    useEffect(() => {
     const initAOS = () => {
       AOS.init({
-        duration: 800,
-        once: false,      // IMPORTANT for mobile stability
+        duration: 750,
+        once: false,    
         offset: 80,
         disable: false,
       });
@@ -26,21 +25,10 @@ function App() {
 
     initAOS();
 
-    // re-fix mobile resize/scroll issues
     window.addEventListener("resize", initAOS);
 
     return () => window.removeEventListener("resize", initAOS);
   }, []);
-
-// useEffect(() => {
-//     AOS.init({
-//       duration: 800,
-//       once: false,
-//       offset: 100,
-//     });
-
-//     AOS.refreshHard();
-//   }, []);
   return (
     <>
     <div>
